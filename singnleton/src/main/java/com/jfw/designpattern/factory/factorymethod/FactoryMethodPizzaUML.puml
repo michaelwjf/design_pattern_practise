@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class Pizza{
+    + void prepare();
+    + void bake();
+    + void cut();
+    + void box();
+}
+
+class BJCheesePizza{}
+
+class BJPepperPizza{}
+
+class LondonCheesePizza{}
+
+class LondonPepperPizza{}
+
+abstract class OrderPizza{
+    + Abstract Pizza createPizza();
+}
+
+class BJOrderPizza{}
+
+class LondonOrderPizza{}
+
+Pizza <|-- BJCheesePizza
+Pizza <|-- BJPepperPizza
+Pizza <|-- LondonCheesePizza
+Pizza <|-- LondonPepperPizza
+
+BJCheesePizza <.. BJOrderPizza
+BJPepperPizza <.. BJOrderPizza
+LondonCheesePizza <.. LondonOrderPizza
+LondonPepperPizza <.. LondonOrderPizza
+
+OrderPizza <|-- BJOrderPizza
+OrderPizza <|-- LondonOrderPizza
+
+
+
+@enduml
