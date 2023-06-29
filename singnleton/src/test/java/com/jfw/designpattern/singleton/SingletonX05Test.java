@@ -1,16 +1,14 @@
 package com.jfw.designpattern.singleton;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
  * @author jfw
- * @date 2023-06-29
+ * @date 2021-07-21
  */
-class Singleton01aTest {
+class SingletonX05Test {
 
     @BeforeEach
     void setUp() {
@@ -22,10 +20,11 @@ class Singleton01aTest {
 
     @Test
     void getInstance() {
-        Singleton01a instance = Singleton01a.getInstance();
-        Singleton01a instance2 = Singleton01a.getInstance();
-        System.out.println(instance == instance2);
+        SingletonX05 instance = SingletonX05.getInstance();
+        SingletonX05 instance1 = SingletonX05.getInstance();
+
+        System.out.println(instance == instance1);
         System.out.println(instance.hashCode());
-        System.out.println(instance2.hashCode());
+        System.out.println(instance1.hashCode());
     }
 }

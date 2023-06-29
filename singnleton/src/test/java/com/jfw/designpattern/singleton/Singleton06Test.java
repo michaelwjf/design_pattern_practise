@@ -1,7 +1,5 @@
 package com.jfw.designpattern.singleton;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,15 +19,12 @@ class Singleton06Test {
     }
 
     @Test
-    void testEnum() {
-        Singleton06 instance = Singleton06.INSTANCE;
-        Singleton06 instance1 = Singleton06.INSTANCE;
+    void getInstance() {
+        Singleton06 instance = Singleton06.getInstance();
+        Singleton06 instance1 = Singleton06.getInstance();
 
         System.out.println(instance == instance1);
         System.out.println(instance.hashCode());
         System.out.println(instance1.hashCode());
-
-        instance.sayHello();
-        instance1.sayHello();
     }
 }
