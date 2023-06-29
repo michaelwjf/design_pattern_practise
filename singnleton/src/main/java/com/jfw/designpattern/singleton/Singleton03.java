@@ -1,17 +1,23 @@
 package com.jfw.designpattern.singleton;
 
 /**
+ * 单例模式，懒汉式，同步方法。
+ * <p>
+ * 优点： 解决了线程不安全的问题。
+ * <p>
+ * 缺点： 这种方法给getInstance方法加上同步，保证了线程安全。但是因为每次调用方法都会同步，
+ * 无论需不需要创建instance，效率大大降低，所以实际开发中不推荐
+ *
  * @author jfw
  * @date 2021-07-21
- * <p>
- * 单例模式，懒汉式，同步方法。这种方法给getInstance方法加上同步，保证了线程安全。
- * 但是因为每次调用方法都会同步，无论需不需要创建instance，效率大大降低，所以实际开发中不推荐
  */
 public class Singleton03 {
     /**
      * 私有化构造器，避免new
      */
-    private Singleton03(){}
+    private Singleton03() {
+
+    }
 
     private static Singleton03 instance;
 
