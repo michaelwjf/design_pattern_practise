@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
  * @author jfw
  * @date 2021-07-21
  */
-class SingletonX05Test {
+class Singleton07Test {
 
     @BeforeEach
     void setUp() {
@@ -20,8 +20,8 @@ class SingletonX05Test {
 
     @Test
     void getInstance() {
-        SingletonX05 instance = SingletonX05.getInstance();
-        SingletonX05 instance1 = SingletonX05.getInstance();
+        Singleton07 instance = Singleton07.getInstance();
+        Singleton07 instance1 = Singleton07.getInstance();
 
         System.out.println(instance == instance1);
         System.out.println(instance.hashCode());
