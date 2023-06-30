@@ -1,28 +1,33 @@
 package com.jfw.designpattern.singleton;
 
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 /**
  * @author jfw
- * @date 2021-07-12
+ * @date 2023-06-29
  */
 class Singleton01Test {
 
-    @org.junit.jupiter.api.BeforeEach
+    @BeforeEach
     void setUp() {
     }
 
-    @org.junit.jupiter.api.AfterEach
+    @AfterEach
     void tearDown() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getInstance() {
         Singleton01 instance = Singleton01.getInstance();
-        Singleton01 instance1 = Singleton01.getInstance();
+        Singleton01 instance2 = Singleton01.getInstance();
 
-        System.out.println(instance == instance1);
-        System.out.println(String.format("The hash code of instance = %s",
-                instance.hashCode()));
-        System.out.println(String.format("the hash code of instance1 = %s",
-                instance1.hashCode()));
+        System.out.println(instance == instance2);
+        System.out.println(instance.hashCode());
+        System.out.println(instance2.hashCode());
+
     }
 }
