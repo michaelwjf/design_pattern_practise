@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
  * @author jfw
  * @date 2021-07-21
  */
-class SingletonX06Test {
+class Singleton08Test {
 
     @BeforeEach
     void setUp() {
@@ -20,8 +20,8 @@ class SingletonX06Test {
 
     @Test
     void testEnum() {
-        SingletonX06 instance = SingletonX06.INSTANCE;
-        SingletonX06 instance1 = SingletonX06.INSTANCE;
+        Singleton08 instance = Singleton08.INSTANCE;
+        Singleton08 instance1 = Singleton08.INSTANCE;
 
         System.out.println(instance == instance1);
         System.out.println(instance.hashCode());
