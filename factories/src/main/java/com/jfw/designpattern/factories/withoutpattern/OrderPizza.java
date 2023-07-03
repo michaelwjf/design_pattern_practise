@@ -21,6 +21,9 @@ public class OrderPizza {
                 pizza = new GreekPizza();
             } else if ("cheese".equals(orderType)) {
                 pizza = new CheesePizza();
+            } else if ("pepper".equals(orderType)) {
+                // 当新增一个peper pizza的时候，就需要在这里改动代码，把新增加的类新给加进去
+                pizza = new PepperPizza();
             } else {
                 System.out.printf("%s pizza can not found , exit%n", orderType);
 
