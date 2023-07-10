@@ -24,11 +24,15 @@ public class SimpleFactory {
      */
     public Pizza createPizza(String orderType) {
         System.out.println(" 使用简单工厂模式 ");
-        return switch (orderType) {
-            case "greek" -> new GreekPizza();
-            case "cheese" -> new CheesePizza();
-            case "pepper" -> new PepperPizza();
-            default -> null;
-        };
+        switch (orderType) {
+            case "greek":
+                return new GreekPizza();
+            case "cheese":
+                return new CheesePizza();
+            case "pepper":
+                return new PepperPizza();
+            default:
+                return null;
+        }
     }
 }
