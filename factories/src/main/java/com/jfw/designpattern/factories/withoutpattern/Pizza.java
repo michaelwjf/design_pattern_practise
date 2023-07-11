@@ -50,5 +50,13 @@ public abstract class Pizza {
         this.name = name;
     }
 
+    /**
+     * get the name of the pizza
+     * @return the name of the pizza
+     */
+    public String getName() {
+        return this.name;
+    }
+
 
 }
