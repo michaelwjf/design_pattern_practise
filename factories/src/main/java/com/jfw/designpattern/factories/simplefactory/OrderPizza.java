@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import com.jfw.designpattern.factories.commonfunction.StaticComFunc;
 import com.jfw.designpattern.factories.withoutpattern.Pizza;
 
 /**
@@ -29,7 +30,7 @@ public class OrderPizza {
         Pizza pizza = null;
 
         do {
-            orderType = getType();
+            orderType = StaticComFunc.getType();
             pizza = factory.createPizza(orderType);
             if (pizza != null) {
                 // pizza对象不为空表示订购pizza成功
@@ -43,17 +44,5 @@ public class OrderPizza {
             }
         } while (true);
 
-    }
-
-    private String getType() {
-        try {
-            BufferedReader bufferedReader =
-                    new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("input the pizza type: ");
-            return bufferedReader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return "";
-        }
     }
 }

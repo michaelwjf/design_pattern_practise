@@ -1,8 +1,6 @@
 package com.jfw.designpattern.factories.factorymethod;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import com.jfw.designpattern.factories.commonfunction.StaticComFunc;
 
 /**
  * 使用工厂方法模式实现新需求的PizzaStore
@@ -13,7 +11,7 @@ import java.io.InputStreamReader;
 public class PizzaStore {
     public static void main(String[] args) {
         do {
-            String location = getLoc();
+            String location = StaticComFunc.getLocation();
             if ("Beijing".equals(location)) {
                 System.out.println("start to order Beijing Pizza");
                 new BeijingOrderPizza();
@@ -26,17 +24,4 @@ public class PizzaStore {
             }
         } while (true);
     }
-
-    private static String getLoc() {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            System.out.println("input the location...");
-            return in.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-
 }

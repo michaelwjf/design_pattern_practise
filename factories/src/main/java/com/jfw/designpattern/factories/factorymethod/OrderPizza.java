@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import com.jfw.designpattern.factories.commonfunction.StaticComFunc;
 import com.jfw.designpattern.factories.withoutpattern.Pizza;
 
 /**
@@ -19,7 +20,7 @@ public abstract class OrderPizza {
     public OrderPizza() {
         Pizza pizza = null;
         do {
-            String orderType = getType();
+            String orderType = StaticComFunc.getType();
             // 使用抽象方法createPizza来创建pizza类，具体抽象方法的实现由子类完成
             pizza = createPizza(orderType);
             if (pizza != null) {
@@ -43,15 +44,4 @@ public abstract class OrderPizza {
      * @return 不同类型的Pizza
      */
     abstract Pizza createPizza(String orderType);
-
-    private String getType() {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            System.out.println("input pizza flavor: ");
-            return in.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 }
