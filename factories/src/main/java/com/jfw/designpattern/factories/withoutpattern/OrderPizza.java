@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import com.jfw.designpattern.factories.commonfunction.StaticComFunc;
+
 /**
  * @author jfw
  * @date 2023-07-03
@@ -16,7 +18,7 @@ public class OrderPizza {
     public OrderPizza() {
         Pizza pizza = null;
         do {
-            String orderType = getType();
+            String orderType = StaticComFunc.getType();
             if ("greek".equals(orderType)) {
                 pizza = new GreekPizza();
             } else if ("cheese".equals(orderType)) {
@@ -37,22 +39,5 @@ public class OrderPizza {
             pizza.box();
         } while (true);
 
-    }
-
-    /**
-     * 通过键盘输入获取pizza的类型
-     * @return String Pizza类型
-     */
-    private String getType() {
-        try {
-            BufferedReader bufferedReader =
-                    new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("input the pizza type: ");
-            return bufferedReader.readLine();
-        } catch (IOException e) {
-//            throw new RuntimeException(e);
-            e.printStackTrace();
-            return null;
-        }
     }
 }
