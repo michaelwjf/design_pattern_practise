@@ -1,9 +1,10 @@
 package com.jfw.designpattern.prototype.pattern;
 
 /**
+ * @see com.jfw.designpattern.prototype.withoutpattern.Sheep
  * @author jfw
  * @date 2023-07-26
- * @see com.jfw.designpattern.prototype.withoutpattern.Sheep
+ * <p>
  * updated Sheep class to implement the interface Cloneable
  */
 public class Sheep1 implements Cloneable {
