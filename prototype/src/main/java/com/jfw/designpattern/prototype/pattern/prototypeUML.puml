@@ -1,0 +1,58 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+
+
+'abstract class AbstractList
+'abstract AbstractCollection
+'interface List
+'interface Collection
+'
+'List <|-- AbstractList
+'Collection <|-- AbstractCollection
+'
+'Collection <|- List
+'AbstractCollection <|- AbstractList
+'AbstractList <|-- ArrayList
+'
+'class ArrayList {
+'Object[] elementData
+'size()
+'}
+'
+'enum TimeUnit {
+'DAYS
+'HOURS
+'MINUTES
+'}
+
+' Prototype 通常是一个接口，里面带有一个方法clone，这个方法可以让实现了Prototype接口的类
+' 克隆自己的对象。
+' ConcretePrototype1，ConcretePrototype2等就是实现Prototype接口的具体的类。
+' client里面包含调用ConcretePrototype1或者ConcretePrototype2的方法，调用时，
+' ConcretePrototype1或者ConcretePrototype2的对象可以克隆自己的全套属性，然后返回一个
+' 跟自己属性一模一样的对象。
+
+
+class Client
+
+interface Prototype{
+    + Object clone()
+}
+
+class ConcretePrototype1{
+    + Object clone()
+}
+
+class ConcretePrototype2{
+    + Object clone()
+}
+
+Prototype <|.. ConcretePrototype1
+Prototype <|.. ConcretePrototype2
+
+Prototype <.. Client
+
+@enduml
