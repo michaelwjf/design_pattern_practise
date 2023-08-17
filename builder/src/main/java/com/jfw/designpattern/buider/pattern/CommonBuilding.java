@@ -1,12 +1,12 @@
 package com.jfw.designpattern.buider.pattern;
 
 /**
+ * ConcreteBuilder角色，在这个类里面实现具体的建房步骤
+ *
  * @author jfw
  * @date 2021-09-28
- *
- * ConcreteBuilder角色，在这个类里面实现具体的建房步骤
  */
-public class CommonBuilding extends HouseBuilder{
+public class CommonBuilding extends HouseBuilder {
     /**
      * 打地基
      */

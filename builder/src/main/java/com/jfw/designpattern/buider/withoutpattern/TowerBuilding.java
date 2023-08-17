@@ -6,7 +6,7 @@ package com.jfw.designpattern.buider.withoutpattern;
  * <p/>
  * 高楼
  */
-public class TowerBuilding extends House{
+public class TowerBuilding extends House {
     /**
      * 打地基
      */
