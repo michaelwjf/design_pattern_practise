@@ -12,6 +12,7 @@
         <module>singnleton</module>
         <module>factories</module>
         <module>prototype</module>
+        <module>builder</module>
     </modules>
 
     <dependencies>
