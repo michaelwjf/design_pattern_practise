@@ -17,7 +17,7 @@ class CommonBuilding{}
 class TowerBuilding{}
 
 class HouseDirector{
-    + HouseBuilder houseBuilder
+    - HouseBuilder houseBuilder;
 }
 
 class Client{}

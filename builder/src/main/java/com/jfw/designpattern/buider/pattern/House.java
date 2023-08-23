@@ -1,10 +1,12 @@
 package com.jfw.designpattern.buider.pattern;
 
 /**
+ * 对应角色为Product，定义产品，产品该有的属性都可以在这个产品里面。
+ * <p/>
+ * 这里产品是一个房子，那么房子该有的属性都在里面，比如地基，墙，屋顶等。
+ *
  * @author jfw
  * @date 2021-09-28
- *
- * 对应角色为Product，定义产品
  */
 public class House {
     private String base;

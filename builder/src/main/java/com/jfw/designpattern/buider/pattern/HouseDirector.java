@@ -1,10 +1,10 @@
 package com.jfw.designpattern.buider.pattern;
 
 /**
+ * Director角色，在这个里面实现建房的步骤的顺序，例如先做什么后做什么。
+ *
  * @author jfw
  * @date 2021-09-28
- *
- * Director角色，在这个里面实现建房的步骤的顺序，例如先做什么后做什么。
  */
 public class HouseDirector {
 
