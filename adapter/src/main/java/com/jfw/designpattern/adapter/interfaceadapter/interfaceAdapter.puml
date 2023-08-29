@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface SourceInterface {
+    + void operation1();
+    + void operation2();
+    + void operation3();
+    + void operation4();
+}
+
+abstract class AbsAdapter {
+    ' 用空方法默认实现接口中的所有方法
+    + void operation1();
+    + void operation2();
+    + void operation3();
+    + void operation4();
+}
+
+class Adapter {
+    ' 依赖AbsAdapter，并重写operation1
+    + void operation1();
+}
+
+SourceInterface <|-- AbsAdapter
+AbsAdapter <.. Adapter
+
+@enduml
