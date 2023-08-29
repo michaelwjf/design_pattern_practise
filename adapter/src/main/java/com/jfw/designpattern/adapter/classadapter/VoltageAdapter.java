@@ -1,7 +1,7 @@
 package com.jfw.designpattern.adapter.classadapter;
 
 /**
- * adapter类，继承src类，实现dst接口
+ * 类适配器，Adapter类，继承src类，实现dst接口
  *
  * @author jfw
  * @date 2023-08-28

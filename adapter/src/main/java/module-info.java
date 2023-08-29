@@ -10,6 +10,11 @@
  * <p/>
  * 类适配器 <br>
  * Adapter类通过继承src类，实现dst类接口，完成 src -> dst 的适配。
+ * <p/>
+ * 对象适配器 <br>
+ * 基本思路和类适配器相同，只是将Adapter类作修改，不是继承src类，而是持有src类的实例，
+ * 以解决兼容性问题。即：持有src类，实现dst接口，完成src -> dst 的适配。
+ *
  * @author jfw
  * @date 2023-08-25
  */module adapter {
