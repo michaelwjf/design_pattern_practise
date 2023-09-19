@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+' src类，220V交流电
+class Voltage220V {
+    + int output220V();
+}
+
+' dst类，5V直流电
+interface Voltage5V {
+    + int output5V();
+}
+
+' adapter类，继承src类，实现dst接口
+class VoltageAdapter {
+}
+
+' 需要依赖5V交流电充电
+class Phone {
+    + void charging();
+}
+
+' 调用Phone和adapter，使用5V直流电给Phone充电
+class Client {
+}
+
+Voltage220V <|-- VoltageAdapter
+Voltage5V <|.. VoltageAdapter
+
+Voltage5V <.. Phone
+
+Phone <.. Client
+VoltageAdapter <.. Client
+
+@enduml
