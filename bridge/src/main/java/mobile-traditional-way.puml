@@ -1,0 +1,72 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Phone{
+    void call();
+}
+
+class Folded{
+    void call();
+}
+
+class UpRight{
+    void call();
+}
+
+class Slide{
+    void call();
+}
+
+class FoldedHuaWei{
+    void call();
+}
+
+class FoldedVivo{
+    void call();
+}
+
+class FoldedXiaomi{
+    void call();
+}
+
+class UpRightHuaWei{
+    void call();
+}
+
+class UpRightVivo{
+    void call();
+}
+
+class UpRightXiaomi{
+    void call();
+}
+
+class SlideHuaWei{
+    void call();
+}
+
+class SlideVivo{
+    void call();
+}
+
+class SlideXiaomi{
+    void call();
+}
+
+Phone <|-- Folded
+Phone <|-- UpRight
+Phone <|-- Slide
+
+Folded <|-- FoldedHuaWei
+Folded <|-- FoldedVivo
+Folded <|-- FoldedXiaomi
+
+UpRight <|-- UpRightHuaWei
+UpRight <|-- UpRightVivo
+UpRight <|-- UpRightXiaomi
+
+Slide <|-- SlideHuaWei
+Slide <|-- SlideVivo
+Slide <|-- SlideXiaomi
+
+@enduml
